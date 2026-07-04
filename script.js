@@ -98,6 +98,7 @@ for(let i=1;i<=num;i++){
 }
 console.log(`the sum of numbers from 1 to ${num} is ${sum}`);
 
+
 //print n numbers using while loop
 let num1=prompt("enter a number");
 let i=1;
@@ -105,6 +106,7 @@ while(i<=num1){
     console.log(i);
     i++;
 }
+
 
 //print number using do while loop
 let num2=prompt("enter a number");
@@ -115,6 +117,7 @@ do{
 }while(j<=num2);
 
 
+
 //functions in javascript
 
 function MyName(name){
@@ -122,16 +125,19 @@ function MyName(name){
 }
 MyName("jahnvi katiyar");
 
+
 // sum using function
  function sum1(a,b){
     console.log(a+b);
  }
  sum1(10,67);
 
+
  //arrow function
  const sum2=(a,b) => console.log(a+b);
  sum2(96,64);
 
+ 
  //forEach loop
  let arr=[1,2,3,4,5];
  arr.forEach(function printval(val){
