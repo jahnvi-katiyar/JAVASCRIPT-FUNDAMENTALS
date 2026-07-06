@@ -91,55 +91,122 @@
 
 
 //sum on numbers from 1 to n from for loop
-let num=prompt("enter a number");
-let sum=0;
-for(let i=1;i<=num;i++){
-    sum+=i;
-}
-console.log(`the sum of numbers from 1 to ${num} is ${sum}`);
+// let num=prompt("enter a number");
+// let sum=0;
+// for(let i=1;i<=num;i++){
+//     sum+=i;
+// }
+// console.log(`the sum of numbers from 1 to ${num} is ${sum}`);
 
 
-//print n numbers using while loop
-let num1=prompt("enter a number");
-let i=1;
-while(i<=num1){
-    console.log(i);
-    i++;
-}
+// //print n numbers using while loop
+// let num1=prompt("enter a number");
+// let i=1;
+// while(i<=num1){
+//     console.log(i);
+//     i++;
+// }
 
 
-//print number using do while loop
-let num2=prompt("enter a number");
-let j=1;
-do{
-    console.log(j);
-    j++;
-}while(j<=num2);
+// //print number using do while loop
+// let num2=prompt("enter a number");
+// let j=1;
+// do{
+//     console.log(j);
+//     j++;
+// }while(j<=num2);
 
 
 
-//functions in javascript
+// //functions in javascript
 
-function MyName(name){
-    console.log(name);
-}
-MyName("jahnvi katiyar");
-
-
-// sum using function
- function sum1(a,b){
-    console.log(a+b);
- }
- sum1(10,67);
+// function MyName(name){
+//     console.log(name);
+// }
+// MyName("jahnvi katiyar");
 
 
- //arrow function
- const sum2=(a,b) => console.log(a+b);
- sum2(96,64);
+// // sum using function
+//  function sum1(a,b){
+//     console.log(a+b);
+//  }
+//  sum1(10,67);
+
+
+//  //arrow function
+//  const sum2=(a,b) => console.log(a+b);
+//  sum2(96,64);
 
  
- //forEach loop
- let arr=[1,2,3,4,5];
- arr.forEach(function printval(val){
-    console.log(val)
- });
+//  //forEach loop
+//  let arr=[1,2,3,4,5];
+//  arr.forEach(function printval(val){
+//     console.log(val)
+//  });
+
+
+// arrays in javascript
+
+//map in array
+
+let num=[1,4,6,3];
+ let sq=num.map((val)=>{
+  return val*val;
+});
+console.log(sq);
+console.log(num);
+
+
+//filter in array
+
+let arr=[1,2,3,4,5,6,7,8,9,0,];
+
+let oddArray=arr.filter((val)=>{
+  return val%2!==0;
+})
+console.log(oddArray);
+console.log(arr);
+
+//filter out marks of student that score 90+
+
+let marks=[23,99,45,67,89,90,99,100];
+let topper=marks.filter((val)=>{
+  return val>=90;
+})
+console.log(topper);
+
+
+// reduce in array
+
+let arr1=[1,2,3,4,5];
+let sum=arr1.reduce((res,val)=>{
+  return res+val;     
+})
+console.log(`sum of array1 is ${sum}`);
+
+//largest no. using reduce
+
+let arr3=[2,5,7,43,57,34,98];
+ let largest=arr3.reduce((res,curr)=>{
+  return res>curr ? res : curr;
+});
+console.log(`largest no is ${largest}`);
+
+
+//factorial of n numbers
+
+let input=prompt("enter a number");
+let arr4=[];
+for(let i=1;i<=input;i++){
+  arr4[i-1]=i;
+}
+console.log(arr4);
+
+let fact=arr4.reduce((res,val)=>{
+  return res*val;
+})
+console.log(`factorial of arr is ${fact}`);
+
+
+
+
