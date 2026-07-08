@@ -10,3 +10,6 @@ loops(for,while,do..while) and functions
 # day4
 arrays (slice, concat, splice, pop, push, shift, unshift)
 map, filter, reduce , forEach
+
+# day5 
+mini project using map,filter,reduce,forEach
