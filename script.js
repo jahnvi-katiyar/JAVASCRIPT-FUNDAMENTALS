@@ -149,64 +149,112 @@
 
 //map in array
 
-let num=[1,4,6,3];
- let sq=num.map((val)=>{
-  return val*val;
+// let num=[1,4,6,3];
+//  let sq=num.map((val)=>{
+//   return val*val;
+// });
+// console.log(sq);
+// console.log(num);
+
+
+// //filter in array
+
+// let arr=[1,2,3,4,5,6,7,8,9,0,];
+
+// let oddArray=arr.filter((val)=>{
+//   return val%2!==0;
+// })
+// console.log(oddArray);
+// console.log(arr);
+
+// //filter out marks of student that score 90+
+
+// let marks=[23,99,45,67,89,90,99,100];
+// let topper=marks.filter((val)=>{
+//   return val>=90;
+// })
+// console.log(topper);
+
+
+// // reduce in array
+
+// let arr1=[1,2,3,4,5];
+// let sum=arr1.reduce((res,val)=>{
+//   return res+val;     
+// })
+// console.log(`sum of array1 is ${sum}`);
+
+// //largest no. using reduce
+
+// let arr3=[2,5,7,43,57,34,98];
+//  let largest=arr3.reduce((res,curr)=>{
+//   return res>curr ? res : curr;
+// });
+// console.log(`largest no is ${largest}`);
+
+
+// //factorial of n numbers
+
+// let input=prompt("enter a number");
+// let arr4=[];
+// for(let i=1;i<=input;i++){
+//   arr4[i-1]=i;
+// }
+// console.log(arr4);
+
+// let fact=arr4.reduce((res,val)=>{
+//   return res*val;
+// })
+// console.log(`factorial of arr is ${fact}`);
+
+// mini project 
+
+const students =[
+ {name:"aman",marks:85},
+ {name:"riya",marks:42},
+ {name:"karan",marks:67},
+ {name:"sneha",marks:30},
+ {name:"rahul",marks:90}
+];
+
+let table=document.getElementById("table");
+
+students.forEach(function(student){
+  table.innerHTML +=
+  "<tr>"+
+  "<td>"+ student.name +"</td>" +
+  "<td>"+ student.marks +"</td>" +
+  "</tr>";
 });
-console.log(sq);
-console.log(num);
 
 
-//filter in array
+// retriving the students who get marks above 50 using filter
 
-let arr=[1,2,3,4,5,6,7,8,9,0,];
-
-let oddArray=arr.filter((val)=>{
-  return val%2!==0;
-})
-console.log(oddArray);
-console.log(arr);
-
-//filter out marks of student that score 90+
-
-let marks=[23,99,45,67,89,90,99,100];
-let topper=marks.filter((val)=>{
-  return val>=90;
-})
+const topper=students.filter(function(student){
+  return student.marks >50;
+});
 console.log(topper);
 
 
-// reduce in array
+// creating new array with only names in uppercase
 
-let arr1=[1,2,3,4,5];
-let sum=arr1.reduce((res,val)=>{
-  return res+val;     
-})
-console.log(`sum of array1 is ${sum}`);
-
-//largest no. using reduce
-
-let arr3=[2,5,7,43,57,34,98];
- let largest=arr3.reduce((res,curr)=>{
-  return res>curr ? res : curr;
+const NAMES= students.map(function(val){
+  return val.name.toUpperCase();
 });
-console.log(`largest no is ${largest}`);
+console.log(NAMES)
 
 
-//factorial of n numbers
+// find the average marks using reduce
 
-let input=prompt("enter a number");
-let arr4=[];
-for(let i=1;i<=input;i++){
-  arr4[i-1]=i;
-}
-console.log(arr4);
-
-let fact=arr4.reduce((res,val)=>{
-  return res*val;
-})
-console.log(`factorial of arr is ${fact}`);
+const total= students.reduce(function(res,val){
+  return res+val.marks;
+}, 0);
+const avg = total/students.length;
+console.log(avg)
 
 
+//print each student marks using forEach
 
-
+students.forEach(function(student){
+  console.log(`${student.name} scored ${student.marks} marks in exam`);
+});
