@@ -228,33 +228,91 @@ students.forEach(function(student){
 });
 
 
-// retriving the students who get marks above 50 using filter
+// // retriving the students who get marks above 50 using filter
 
-const topper=students.filter(function(student){
-  return student.marks >50;
-});
-console.log(topper);
-
-
-// creating new array with only names in uppercase
-
-const NAMES= students.map(function(val){
-  return val.name.toUpperCase();
-});
-console.log(NAMES)
+// const topper=students.filter(function(student){
+//   return student.marks >50;
+// });
+// console.log(topper);
 
 
-// find the average marks using reduce
+// // creating new array with only names in uppercase
 
-const total= students.reduce(function(res,val){
-  return res+val.marks;
-}, 0);
-const avg = total/students.length;
-console.log(avg)
+// const NAMES= students.map(function(val){
+//   return val.name.toUpperCase();
+// });
+// console.log(NAMES)
 
 
-//print each student marks using forEach
+// // find the average marks using reduce
 
-students.forEach(function(student){
-  console.log(`${student.name} scored ${student.marks} marks in exam`);
-});
+// const total= students.reduce(function(res,val){
+//   return res+val.marks;
+// }, 0);
+// const avg = total/students.length;
+// console.log(avg)
+
+
+// //print each student marks using forEach
+
+// students.forEach(function(student){
+//   console.log(`${student.name} scored ${student.marks} marks in exam`);
+// });
+
+
+// variables
+
+let a= 10;
+let b=20;
+a=b;
+console.log(a)
+
+const PI=3.14;
+console.log(PI) ;   // we cannot change or update the the const value
+
+// var have global scope , we can change it. update it.
+// let have block scope , we cannot change it. but update it .
+// in case of const , we cannot change it or cannot update it.
+
+console.log( typeof 42 );  //number
+console.log( typeof "jahnvi"); //string
+console.log( typeof true); //boolean
+console.log( typeof null ); //object
+console.log( typeof undefined); //undefined
+console.log( typeof {name:"jahnvi"}); //object
+console.log( typeof [1,3,5]); //object
+console.log( typeof {}); //object
+console.log( typeof []); //object
+
+console.log(10+5);
+console.log(10-5);
+console.log(10*5);
+console.log(10/5);
+console.log(10%5);
+console.log(10**5);
+
+let num= 5;
+console.log(++num); // pre increment
+console.log(num++); // post increment
+console.log(--num); //pre decrement
+console.log(num--); //post decrement
+
+console.log(8=="8")
+console.log(8==="8")
+console.log(8!=="8")
+console.log(8!="8")
+
+
+// type conversion
+
+console.log(typeof Number("25"));
+console.log(typeof String(100));
+console.log(typeof Boolean(1));
+console.log(typeof Boolean("hello"));
+
+
+
+
+
+
+
