@@ -310,9 +310,47 @@ console.log(typeof String(100));
 console.log(typeof Boolean(1));
 console.log(typeof Boolean("hello"));
 
+// Grade calculator
 
+let marks= Number(prompt("enter a number"));
+let grade;
+if (marks>=90){
+  grade="A";
+}else if (90>marks && marks>=75){
+  grade="B";
+}else{
+  grade="C";
+}console.log(grade);
 
+// age eligibility checker
 
+let age=Number(prompt("enter a age"));
+let creat;
+if(age>18){
+  cret="younger";
+}
+else if(65>age && age>18){
+  cret="adult";
+}
+else{
+  cret="older";
+}
+console.log(cret);
+
+// electicity bill calculator
+
+let units=Number(prompt("enter a electricity bill"));
+let rate;
+if (unit<=100){
+  rate=5;
+}else if(unit<=200){
+  rate=7;
+}else{
+  rate=10;
+}
+
+let bill = units*rate;
+console.log(`bill is ${bill}`);
 
 
 
