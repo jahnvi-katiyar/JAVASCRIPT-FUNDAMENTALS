@@ -209,149 +209,232 @@
 
 // mini project 
 
-const students =[
- {name:"aman",marks:85},
- {name:"riya",marks:42},
- {name:"karan",marks:67},
- {name:"sneha",marks:30},
- {name:"rahul",marks:90}
-];
+// const students =[
+//  {name:"aman",marks:85},
+//  {name:"riya",marks:42},
+//  {name:"karan",marks:67},
+//  {name:"sneha",marks:30},
+//  {name:"rahul",marks:90}
+// ];
 
-let table=document.getElementById("table");
-
-students.forEach(function(student){
-  table.innerHTML +=
-  "<tr>"+
-  "<td>"+ student.name +"</td>" +
-  "<td>"+ student.marks +"</td>" +
-  "</tr>";
-});
-
-
-// // retriving the students who get marks above 50 using filter
-
-// const topper=students.filter(function(student){
-//   return student.marks >50;
-// });
-// console.log(topper);
-
-
-// // creating new array with only names in uppercase
-
-// const NAMES= students.map(function(val){
-//   return val.name.toUpperCase();
-// });
-// console.log(NAMES)
-
-
-// // find the average marks using reduce
-
-// const total= students.reduce(function(res,val){
-//   return res+val.marks;
-// }, 0);
-// const avg = total/students.length;
-// console.log(avg)
-
-
-// //print each student marks using forEach
+// let table=document.getElementById("table");
 
 // students.forEach(function(student){
-//   console.log(`${student.name} scored ${student.marks} marks in exam`);
+//   table.innerHTML +=
+//   "<tr>"+
+//   "<td>"+ student.name +"</td>" +
+//   "<td>"+ student.marks +"</td>" +
+//   "</tr>";
 // });
 
 
-// variables
+// // // retriving the students who get marks above 50 using filter
 
-let a= 10;
-let b=20;
-a=b;
-console.log(a)
-
-const PI=3.14;
-console.log(PI) ;   // we cannot change or update the the const value
-
-// var have global scope , we can change it. update it.
-// let have block scope , we cannot change it. but update it .
-// in case of const , we cannot change it or cannot update it.
-
-console.log( typeof 42 );  //number
-console.log( typeof "jahnvi"); //string
-console.log( typeof true); //boolean
-console.log( typeof null ); //object
-console.log( typeof undefined); //undefined
-console.log( typeof {name:"jahnvi"}); //object
-console.log( typeof [1,3,5]); //object
-console.log( typeof {}); //object
-console.log( typeof []); //object
-
-console.log(10+5);
-console.log(10-5);
-console.log(10*5);
-console.log(10/5);
-console.log(10%5);
-console.log(10**5);
-
-let num= 5;
-console.log(++num); // pre increment
-console.log(num++); // post increment
-console.log(--num); //pre decrement
-console.log(num--); //post decrement
-
-console.log(8=="8")
-console.log(8==="8")
-console.log(8!=="8")
-console.log(8!="8")
+// // const topper=students.filter(function(student){
+// //   return student.marks >50;
+// // });
+// // console.log(topper);
 
 
-// type conversion
+// // // creating new array with only names in uppercase
 
-console.log(typeof Number("25"));
-console.log(typeof String(100));
-console.log(typeof Boolean(1));
-console.log(typeof Boolean("hello"));
+// // const NAMES= students.map(function(val){
+// //   return val.name.toUpperCase();
+// // });
+// // console.log(NAMES)
 
-// Grade calculator
 
-let marks= Number(prompt("enter a number"));
-let grade;
-if (marks>=90){
-  grade="A";
-}else if (90>marks && marks>=75){
-  grade="B";
-}else{
-  grade="C";
-}console.log(grade);
+// // // find the average marks using reduce
 
-// age eligibility checker
+// // const total= students.reduce(function(res,val){
+// //   return res+val.marks;
+// // }, 0);
+// // const avg = total/students.length;
+// // console.log(avg)
 
-let age=Number(prompt("enter a age"));
-let creat;
-if(age>18){
-  cret="younger";
-}
-else if(65>age && age>18){
-  cret="adult";
-}
-else{
-  cret="older";
-}
-console.log(cret);
+
+// // //print each student marks using forEach
+
+// // students.forEach(function(student){
+// //   console.log(`${student.name} scored ${student.marks} marks in exam`);
+// // });
+
+
+// // variables
+
+// let a= 10;
+// let b=20;
+// a=b;
+// console.log(a)
+
+// const PI=3.14;
+// console.log(PI) ;   // we cannot change or update the the const value
+
+// // var have global scope , we can change it. update it.
+// // let have block scope , we cannot change it. but update it .
+// // in case of const , we cannot change it or cannot update it.
+
+// console.log( typeof 42 );  //number
+// console.log( typeof "jahnvi"); //string
+// console.log( typeof true); //boolean
+// console.log( typeof null ); //object
+// console.log( typeof undefined); //undefined
+// console.log( typeof {name:"jahnvi"}); //object
+// console.log( typeof [1,3,5]); //object
+// console.log( typeof {}); //object
+// console.log( typeof []); //object
+
+// console.log(10+5);
+// console.log(10-5);
+// console.log(10*5);
+// console.log(10/5);
+// console.log(10%5);
+// console.log(10**5);
+
+// let num= 5;
+// console.log(++num); // pre increment
+// console.log(num++); // post increment
+// console.log(--num); //pre decrement
+// console.log(num--); //post decrement
+
+// console.log(8=="8")
+// console.log(8==="8")
+// console.log(8!=="8")
+// console.log(8!="8")
+
+
+// // type conversion
+
+// console.log(typeof Number("25"));
+// console.log(typeof String(100));
+// console.log(typeof Boolean(1));
+// console.log(typeof Boolean("hello"));
+
+// // Grade calculator
+
+// let marks= Number(prompt("enter a number"));
+// let grade;
+// if (marks>=90){
+//   grade="A";
+// }else if (90>marks && marks>=75){
+//   grade="B";
+// }else{
+//   grade="C";
+// }console.log(grade);
+
+// // age eligibility checker
+
+// let age=Number(prompt("enter a age"));
+// let creat;
+// if(age>18){
+//   cret="younger";
+// }
+// else if(65>age && age>18){
+//   cret="adult";
+// }
+// else{
+//   cret="older";
+// }
+// console.log(cret);
 
 // electicity bill calculator
 
-let units=Number(prompt("enter a electricity bill"));
-let rate;
-if (unit<=100){
-  rate=5;
-}else if(unit<=200){
-  rate=7;
-}else{
-  rate=10;
+// let units=Number(prompt("enter a electricity bill"));
+// let rate;
+// if (unit<=100){
+//   rate=5;
+// }else if(unit<=200){
+//   rate=7;
+// }else{
+//   rate=10;
+// }
+
+// let bill = units*rate;
+// console.log(`bill is ${bill}`);
+
+
+//switch
+// let day=prompt("enter a day");
+// day=Number.parseInt(day);
+//   switch(day){
+//     case 1:
+//     console.log("monday");
+//     break;
+//     case 2:
+//     console.log("tuesday");
+//     break;
+//     default:
+//     console.log("write again");
+//     break;
+// }
+
+// // number is divisible by 2 and 3 
+
+// let num=Number(prompt("enter a number"));
+// if(num%2==0 && num%3==0){
+//   console.log("number is divisible by both");
+// }
+// else{
+//   console.log("not");
+// }
+
+
+// // for loops 
+
+// let sum=0;
+// let n=prompt("enter a number");
+// n=Number.parseInt(n)
+// for(let i=0; i<n; i++){
+//   sum+=(i+1);
+// }
+// console.log(sum);
+
+//for in loop
+let marks={
+  jahnvi:27,
+  akshara:36,
+  arya:67,
+  sejal:86
+}
+for(let val in marks){
+  console.log("marks of "+ val + " is " + marks[val]);
 }
 
-let bill = units*rate;
-console.log(`bill is ${bill}`);
+// for of loop
+
+for(let x of "jahnvi"){
+  console.log(x);
+}
+
+//while loop 
+
+let p= Number(prompt("enter a number"));
+let i=0;
+while(i<p){
+   console.log(i);
+   i++;
+}
+
+//do while loop
+
+let f=Number(prompt("enter a number"));
+let j=0;
+do{
+  console.log(i);
+  i++;
+}while(i<f)
 
 
+//functions in javascript
+
+function MyName(name){
+    console.log(name);
+}
+MyName("jahnvi katiyar");
 
 
+// sum using function
+ function sum1(a,b){
+    console.log(a+b);
+ }
+ sum1(10,67);
