@@ -389,52 +389,96 @@
 // }
 // console.log(sum);
 
-//for in loop
-let marks={
-  jahnvi:27,
-  akshara:36,
-  arya:67,
-  sejal:86
-}
-for(let val in marks){
-  console.log("marks of "+ val + " is " + marks[val]);
-}
+// //for in loop
+// let marks={
+//   jahnvi:27,
+//   akshara:36,
+//   arya:67,
+//   sejal:86
+// }
+// for(let val in marks){
+//   console.log("marks of "+ val + " is " + marks[val]);
+// }
 
-// for of loop
+// // for of loop
 
-for(let x of "jahnvi"){
-  console.log(x);
-}
+// for(let x of "jahnvi"){
+//   console.log(x);
+// }
 
-//while loop 
+// //while loop 
 
-let p= Number(prompt("enter a number"));
-let i=0;
-while(i<p){
-   console.log(i);
-   i++;
-}
+// let p= Number(prompt("enter a number"));
+// let i=0;
+// while(i<p){
+//    console.log(i);
+//    i++;
+// }
 
-//do while loop
+// //do while loop
 
-let f=Number(prompt("enter a number"));
-let j=0;
-do{
-  console.log(i);
-  i++;
-}while(i<f)
-
-
-//functions in javascript
-
-function MyName(name){
-    console.log(name);
-}
-MyName("jahnvi katiyar");
+// let f=Number(prompt("enter a number"));
+// let j=0;
+// do{
+//   console.log(i);
+//   i++;
+// }while(i<f)
 
 
-// sum using function
- function sum1(a,b){
-    console.log(a+b);
- }
- sum1(10,67);
+// //functions in javascript
+
+// function MyName(name){
+//     console.log(name);
+// }
+// MyName("jahnvi katiyar");
+
+
+// // sum using function
+//  function sum1(a,b){
+//     console.log(a+b);
+//  }
+//  sum1(10,67);
+
+
+//arrow function
+ const sum2=(a,b) => console.log(a+b);
+ sum2(96,64);
+
+ const mult=(x,y)=> console.log(x*y);
+ mult(45,735);
+
+//map in array
+
+let num=[1,4,6,3];
+ let sq=num.map((val)=>{
+  return val*val;
+});
+console.log(sq);
+console.log(num);
+
+
+const students =[
+ {name:"ram",marks:76},
+ {name:"rey",marks:49},
+ {name:"dev",marks:87},
+ {name:"ruh",marks:30},
+ {name:"rishi",marks:90}
+];
+
+//filter
+const topper=students.filter(function(student){
+  return student.marks >50;
+});
+console.log(topper);
+
+//forEach
+students.forEach(function(student){
+  console.log(`${student.name} scored ${student.marks} marks in exam`);
+});
+
+//reduce
+const total= students.reduce(function(res,val){
+  return res+val.marks;
+}, 0);
+const avg = total/students.length;
+console.log(`average of student ${avg}`)
