@@ -440,45 +440,77 @@
 //  sum1(10,67);
 
 
-//arrow function
- const sum2=(a,b) => console.log(a+b);
- sum2(96,64);
+// //arrow function
+//  const sum2=(a,b) => console.log(a+b);
+//  sum2(96,64);
 
- const mult=(x,y)=> console.log(x*y);
- mult(45,735);
+//  const mult=(x,y)=> console.log(x*y);
+//  mult(45,735);
 
-//map in array
+// //map in array
 
-let num=[1,4,6,3];
- let sq=num.map((val)=>{
-  return val*val;
-});
-console.log(sq);
-console.log(num);
+// let num=[1,4,6,3];
+//  let sq=num.map((val)=>{
+//   return val*val;
+// });
+// console.log(sq);
+// console.log(num);
 
 
-const students =[
- {name:"ram",marks:76},
- {name:"rey",marks:49},
- {name:"dev",marks:87},
- {name:"ruh",marks:30},
- {name:"rishi",marks:90}
-];
+// const students =[
+//  {name:"ram",marks:76},
+//  {name:"rey",marks:49},
+//  {name:"dev",marks:87},
+//  {name:"ruh",marks:30},
+//  {name:"rishi",marks:90}
+// ];
 
-//filter
-const topper=students.filter(function(student){
-  return student.marks >50;
-});
-console.log(topper);
+// //filter
+// const topper=students.filter(function(student){
+//   return student.marks >50;
+// });
+// console.log(topper);
 
-//forEach
-students.forEach(function(student){
-  console.log(`${student.name} scored ${student.marks} marks in exam`);
-});
+// //forEach
+// students.forEach(function(student){
+//   console.log(`${student.name} scored ${student.marks} marks in exam`);
+// });
 
-//reduce
-const total= students.reduce(function(res,val){
-  return res+val.marks;
-}, 0);
-const avg = total/students.length;
-console.log(`average of student ${avg}`)
+// //reduce
+// const total= students.reduce(function(res,val){
+//   return res+val.marks;
+// }, 0);
+// const avg = total/students.length;
+// console.log(`average of student ${avg}`)
+
+//select by class
+
+let head=document.getElementsByClassName("heading");
+console.dir(head)
+
+//select by id
+
+let butt=document.getElementById("buttonId");
+console.dir(butt);
+
+//select by tag
+
+let para=document.getElementsByTagName("p");
+console.log(para);
+
+//quick selector
+
+let quickhead=document.querySelector(".heading");
+console.dir(quickhead);
+
+let quickhead2=document.querySelectorAll(".heading");
+console.dir(quickhead2);
+
+let quickbutt=document.querySelector("#buttonId");
+console.dir(quickbutt);
+
+let quickpara=document.querySelector("p");
+console.dir(quickpara);
+
+let quickpara2=document.querySelectorAll("p");
+console.dir(quickpara2);

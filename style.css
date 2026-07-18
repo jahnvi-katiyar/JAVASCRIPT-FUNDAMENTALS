@@ -2,7 +2,7 @@ body{
     background-color: pink;
 }
 
-h1{
+.heading{
     text-transform: capitalize;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -19,4 +19,12 @@ table{
 table,th,td{
     border: 2px solid black;
     padding: 20px;
+}
+
+#buttonId{
+    background-color: yellow;
+    text-align: center;
+}
+p{
+    text-align: center;
 }
