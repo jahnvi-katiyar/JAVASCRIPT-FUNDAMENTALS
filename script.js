@@ -485,32 +485,75 @@
 
 //select by class
 
-let head=document.getElementsByClassName("heading");
-console.dir(head)
+// let head=document.getElementsByClassName("heading");
+// console.dir(head)
 
-//select by id
+// //select by id
 
-let butt=document.getElementById("buttonId");
-console.dir(butt);
+// let butt=document.getElementById("buttonId");
+// console.dir(butt);
 
-//select by tag
+// //select by tag
 
-let para=document.getElementsByTagName("p");
-console.log(para);
+// let para=document.getElementsByTagName("p");
+// console.log(para);
 
-//quick selector
+// //quick selector
 
-let quickhead=document.querySelector(".heading");
-console.dir(quickhead);
+// let quickhead=document.querySelector(".heading");
+// console.dir(quickhead);
 
-let quickhead2=document.querySelectorAll(".heading");
-console.dir(quickhead2);
+// let quickhead2=document.querySelectorAll(".heading");
+// console.dir(quickhead2);
 
-let quickbutt=document.querySelector("#buttonId");
-console.dir(quickbutt);
+// let quickbutt=document.querySelector("#buttonId");
+// console.dir(quickbutt);
 
-let quickpara=document.querySelector("p");
-console.dir(quickpara);
+// let quickpara=document.querySelector("p");
+// console.dir(quickpara);
 
-let quickpara2=document.querySelectorAll("p");
-console.dir(quickpara2);
+// let quickpara2=document.querySelectorAll("p");
+// console.dir(quickpara2);
+
+
+// let btn1=document.querySelector("#btn1");
+// btn1.ondblclick=()=>{
+//     console.log("hello guys");
+//     alert("double click button activate");
+// }
+
+// //event
+
+// let btn2=document.querySelector("#btn2");
+// btn2.onclick=(evt)=>{
+//   console.log(evt.type);
+//   console.log(evt.target);
+//   console.log(evt.clientX,evt.clientY);
+// };
+
+// //eventlistener
+
+// let btn3=document.querySelector("#btn2");
+// btn3.addEventListener("click",()=>{
+//   console.log("button is clicked");
+// });
+
+
+// toggle mode
+
+let modebtn=document.querySelector("#mode");
+let body=document.querySelector("body");
+let currMode="light";
+
+modebtn.addEventListener("click",() =>{
+    if(currMode==="light"){
+        currMode="dark";
+        body.classList.add("dark");
+        body.classList.remove("light");
+    }else{
+        currMode="light";
+        body.classList.add("light");
+        body.classList.remove("dark");       
+    }
+    console.log(currMode);
+});
